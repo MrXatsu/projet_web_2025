@@ -1,0 +1,122 @@
+.title {
+  flex: 0 0 30%;
+  margin: 20px;
+  background-color: #ffffff;
+  border: 1px solid #003366;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.cta {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.return,
+.next,
+.previous {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 150px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid #003366;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.return:hover,
+.next:hover,
+.previous:hover {
+  transform: scale(1.05);
+}
+
+.details {
+  flex: 0 0 70%;
+  margin: 20px;
+  background-color: #ffffff;
+  border: 1px solid #003366;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.subTitle {
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: underline;
+  margin: 10px;
+  text-align: center;
+}
+
+.utp {
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.contenu-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.utp ul {
+  list-style-type: "🔹 ";
+  padding-left: 1em;
+}
+
+.utp li {
+  margin-bottom: 12px;
+  text-align: justify;
+}
+.utp img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+.container p {
+  margin: 0 30px;
+}
+
+.container h2 {
+  font-size: 40px;
+}
+.thumbnail {
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+.thumbnail:hover {
+  transform: scale(1.02);
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px white;
+}

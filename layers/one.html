@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/layers.css" />
+    <title>Modèle OSI : Couche 1</title>
+  </head>
+  <body>
+    <!-- En-tête de la page -->
+    <header>
+      <h1>Le Modèle OSI</h1>
+      <p>Détail sur la première couche</p>
+    </header>
+    <!-- CTA -->
+    <div class="cta">
+      <a href="../index.html">
+        <div class="return">Accueil</div>
+      </a>
+      <a href="two.html">
+        <div class="next">Couche 2</div>
+      </a>
+    </div>
+    <!-- Corps de la page  -->
+    <div class="container">
+      <div class="title">
+        <h1>Couche 1 : Physique</h1>
+      </div>
+      <div class="details">
+        <p>
+          <strong>La couche Physique :</strong> La couche physique est chargée de la transmission
+          effective des signaux électriques, radiofréquences ou optiques entre les interlocuteurs. Son
+          service est généralement limité à l'émission et la réception d'un bit ou d'un train de bits
+          continu (notamment pour les supports synchrones comme la fibre optique). Cette couche est
+          chargée de la conversion entre bits et signaux électriques ou optiques. Elle est en pratique
+          toujours réalisée par un circuit électronique spécifique.
+        </p>
+      </div>
+      <div class="details">
+        <h2><strong>Supports physiques :</strong></h2>
+        <p></p>
+        <div class="subTitle"><strong>Les paires torsadées :</strong></div>
+        <br />
+        <p>
+          Les paires torsadées, plus communément appelé câble ethernet, sont des câbles où comme son nom
+          l'indique, sont des câbles où de fin câbles de cuivre sont entrelacés (torsadées) et par
+          paires.
+        </p>
+        <br />
+        <div class="subTitle">
+          Le fait que les câbles de cuivres soient torsadées présente plusieurs avantages :
+        </div>
+        <br />
+        <div class="utp">
+          <ul>
+            <li>
+              <strong>Réduction des interférences électromagnétiques (EMI) :</strong> les perturbations
+              affectent les deux fils de façon similaire, donc elles peuvent être annulées.
+            </li>
+            <li>
+              <strong>Réduction de la diaphonie (crosstalk) :</strong> le bruit généré entre paires
+              voisines est atténué.
+            </li>
+            <li><strong>Meilleure transmission du signal</strong> sur de plus longues distances.</li>
+          </ul>
+        </div>
+        <div class="subTitle">Les normes :</div>
+        <div class="utp">
+          <p>Longueur maximum = <u> 150 mètres</u></p>
+          <h3>Différentes catégories :</h3>
+          <div class="contenu-flex">
+            <ul>
+              <li><strong>Cat 3 :</strong> 10BaseT (10 Mbits/s)</li>
+              <li><strong>Cat 5 :</strong> 100BaseT (100 Mbits/s)</li>
+              <li><strong>Cat 6,7 :</strong> 1000BaseTX (1 Gbits/s)</li>
+            </ul>
+            <img
+              src="../images/utp cables.png"
+              alt="câble utp"
+              class="thumbnail"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+        </div>
+        <p>Utiliser le plus souvent pour une topologie en étoile</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 - Projet de Lagneaux Myron</p>
+    </footer>
+    <!-- Lightbox pour afficher l'image en grand -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Image agrandie" />
+    </div>
+    <script>
+      function openLightbox(src) {
+        document.getElementById("lightbox-img").src = src;
+        document.getElementById("lightbox").style.display = "flex";
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

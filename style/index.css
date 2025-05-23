@@ -1,0 +1,26 @@
+.volet {
+  flex: 1 1 calc(33.333% - 40px);
+  margin: 10px;
+  background-color: #ffffff;
+  border: 1px solid #003366;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.volet h3 {
+  background-color: #00509e;
+  color: white;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.volet p {
+  padding: 10px;
+}
+
+.volet:hover {
+  transform: scale(1.05);
+}
