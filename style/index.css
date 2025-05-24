@@ -24,3 +24,6 @@
 .volet:hover {
   transform: scale(1.05);
 }
+footer {
+  position: fixed;
+}
