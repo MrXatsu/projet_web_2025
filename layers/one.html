@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="stylesheet" href="../style/layers.css" />
+    <script src="../script.js" defer></script>
     <title>Modèle OSI : Couche 1</title>
   </head>
   <body>
@@ -69,7 +70,7 @@
         <div class="utp">
           <p>Longueur maximum = <u> 150 mètres</u></p>
           <h3>Différentes catégories :</h3>
-          <div class="contenu-flex">
+          <div class="flex-content">
             <ul>
               <li><strong>Cat 3 :</strong> 10BaseT (10 Mbits/s)</li>
               <li><strong>Cat 5 :</strong> 100BaseT (100 Mbits/s)</li>
@@ -84,6 +85,8 @@
           </div>
         </div>
         <p>Utiliser le plus souvent pour une topologie en étoile</p>
+        <div class="subTitle"><strong>Les câbles coaxiaux</strong></div>
+        <div class="flex-content"></div>
       </div>
     </div>
 
@@ -94,15 +97,7 @@
     <div id="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Image agrandie" />
     </div>
-    <script>
-      function openLightbox(src) {
-        document.getElementById("lightbox-img").src = src;
-        document.getElementById("lightbox").style.display = "flex";
-      }
-
-      function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-      }
-    </script>
+    <!--Bouton pour aller vers le haut-->
+    <button id="scrollToTop" title="Remonter en haut">⬆</button>
   </body>
 </html>
