@@ -1,0 +1,12 @@
+# Ignorer les fichiers système de macOS
+.DS_Store
+
+# Ignorer les fichiers de log
+*.log
+
+# Ignorer les fichiers temporaires
+*.tmp
+
+# Ignorer le dossier node_modules (si tu fais du JS avec npm)
+node_modules/
+
