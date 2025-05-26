@@ -14,151 +14,154 @@
       <h1>Le Modèle OSI</h1>
       <p>Détail sur la troisième couche</p>
     </header>
-    <!-- CTA  -->
-    <div class="cta">
-      <a href="two.html">
-        <div class="previous">Couche 2</div>
-      </a>
-      <a href="../index.html">
-        <div class="return">Accueil</div>
-      </a>
-      <a href="four.html">
-        <div class="next">Couche 4</div>
-      </a>
-    </div>
-    <!-- Corps de la page  -->
-    <div class="container">
-      <div class="title"><h3>Couche 3 : Réseau</h3></div>
-      <div class="details">
-        <p>
-          <span class="strongu">La couche Réseau</span> divise les segments de la couche Transport en
-          paquets et les rassemblent ces derniers sur l’appareil récepteur. Elle facilite le transfert de
-          données entre deux réseaux différents en trouvant le meilleur chemin physique pour que ces
-          derniers atteignent leur destination, contrairement à la Liaison qui gère des appareils dans un
-          seul même réseau.
-        </p>
+    <main>
+      <!-- CTA  -->
+      <div class="cta">
+        <a href="two.html">
+          <div class="previous">Couche 2</div>
+        </a>
+        <a href="../index.html">
+          <div class="return">Accueil</div>
+        </a>
+        <a href="four.html">
+          <div class="next">Couche 4</div>
+        </a>
       </div>
-      <div class="details">
-        <div class="subTitle">Les fonctions principales</div>
-        <h3>Addressage logique</h3>
-        <div class="flex-content">
-          <ol>
-            <li>
-              Utilise des adresses IP (IPv4 ou IPv6) pour identifier les machines sur un réseau étendu
-              (Internet, par exemple)
-            </li>
-            <li>
-              Contrairement à l’adresse MAC (locale), l’adresse IP peut changer et permet le routage
-              entre réseaux
-            </li>
-          </ol>
+      <!-- Corps de la page  -->
+      <div class="container">
+        <div class="title"><h3>Couche 3 : Réseau</h3></div>
+        <div class="details">
+          <p>
+            <span class="strongu">La couche Réseau</span> divise les segments de la couche Transport en
+            paquets et les rassemblent ces derniers sur l’appareil récepteur. Elle facilite le transfert
+            de données entre deux réseaux différents en trouvant le meilleur chemin physique pour que ces
+            derniers atteignent leur destination, contrairement à la Liaison qui gère des appareils dans
+            un seul même réseau.
+          </p>
         </div>
-        <h3>Le routage</h3>
-        <div class="flex-content">
-          <ol>
-            <li>
-              Choisit le meilleur chemin pour faire circuler les paquets entre les réseaux, en passant
-              éventuellement par plusieurs routeurs
-            </li>
-            <li>Utilise des protocoles de routage (ex: OSPF, RIP, BGP)</li>
-          </ol>
-        </div>
-        <h3>Découpage en paquets</h3>
-        <div class="flex-content">
-          <ul>
-            <li>
-              La couche 3 prend les segments de la couche 4 (Transport) et les encapsule dans des paquets
-            </li>
-          </ul>
-        </div>
-        <h3>Fragmentation</h3>
-        <div class="flex-content">
-          <ul>
-            <li>
-              Si un paquet est trop grand pour passer sur un certain lien réseau, la couche 3 le découpe
-              en fragments, qui seront réassemblés à l’arrivée
-            </li>
-          </ul>
-        </div>
-        <h3>Contrôle de congestion & gestion d’erreurs basique</h3>
-        <div class="flex-content">
-          <ul>
-            <li>
-              Très limité, mais certains protocoles comme ICMP (utilisé dans ping) permettent de signaler
-              des erreurs ou des problèmes de connectivité
-            </li>
-          </ul>
-        </div>
-        <div class="subTitle">Les protocoles</div>
-        <div class="flex-content">
-          <ul>
-            <li>
-              <span class="strongu">IP (Internet Protocol)</span> – principal protocole d’adressage et de
-              routage
-            </li>
-            <li>
-              <span class="strongu">ICMP (Internet Control Message Protocol)</span> – diagnostic réseau
-              (ping, traceroute)
-            </li>
-            <li>
-              <span class="strongu">ARP (Address Resolution Protocol)</span> – résout une adresse IP en
-              adresse MAC (même si ARP est parfois considéré entre les couches 2 et 3) IGMP (Internet
-              Group Management Protocol) – gestion du multicast
-            </li>
-            <li>
-              <span class="strongu">IGMP (Internet Group Management Protocol)</span> – gestion du
-              multicast
-            </li>
-          </ul>
-        </div>
-        <div class="subTitle">Divers appareils de la couche 3</div>
-        <h3><strong>Le routeur</strong></h3>
-        <div class="flex-content">
-          <ul>
-            <li>Système qui permet de relier différents réseaux entre eux</li>
-            <li>Il a pour rôle de diriger et de router les informations vers la bonne destination</li>
-            <li>
-              C’est aussi la porte d’accès vers l’extérieur(Internet) : Adresse de la Passerelle dans la
-              configuration TCP-IP de l’ordinateur
-            </li>
-          </ul>
-        </div>
-        <div class="flex-content">
-          <img
-            src="../images/router.avif"
-            alt="Router Cisco"
-            class="sat"
-            onclick="openLightbox(this.src)"
-          />
-        </div>
-        <h3>Le FireWall ou Pare-feu</h3>
-        <div class="flex-content">
-          <ul>
-            <li>
-              Fonctionne aussi à la couche 3 pour bloquer/autoriser le trafic selon les adresses IP
-            </li>
-          </ul>
-          <img
-            src="../images/par-feu.png"
-            alt="Pare-Feu"
-            class="wireless"
-            onclick="openLightbox(this.src)"
-          />
-        </div>
-        <!-- CTA  -->
-        <div class="cta">
-          <a href="two.html">
-            <div class="previous">Couche 2</div>
-          </a>
-          <a href="../index.html">
-            <div class="return">Accueil</div>
-          </a>
-          <a href="four.html">
-            <div class="next">Couche 4</div>
-          </a>
+        <div class="details">
+          <div class="subTitle">Les fonctions principales</div>
+          <h3>Addressage logique</h3>
+          <div class="flex-content">
+            <ol>
+              <li>
+                Utilise des adresses IP (IPv4 ou IPv6) pour identifier les machines sur un réseau étendu
+                (Internet, par exemple)
+              </li>
+              <li>
+                Contrairement à l’adresse MAC (locale), l’adresse IP peut changer et permet le routage
+                entre réseaux
+              </li>
+            </ol>
+          </div>
+          <h3>Le routage</h3>
+          <div class="flex-content">
+            <ol>
+              <li>
+                Choisit le meilleur chemin pour faire circuler les paquets entre les réseaux, en passant
+                éventuellement par plusieurs routeurs
+              </li>
+              <li>Utilise des protocoles de routage (ex: OSPF, RIP, BGP)</li>
+            </ol>
+          </div>
+          <h3>Découpage en paquets</h3>
+          <div class="flex-content">
+            <ul>
+              <li>
+                La couche 3 prend les segments de la couche 4 (Transport) et les encapsule dans des
+                paquets
+              </li>
+            </ul>
+          </div>
+          <h3>Fragmentation</h3>
+          <div class="flex-content">
+            <ul>
+              <li>
+                Si un paquet est trop grand pour passer sur un certain lien réseau, la couche 3 le
+                découpe en fragments, qui seront réassemblés à l’arrivée
+              </li>
+            </ul>
+          </div>
+          <h3>Contrôle de congestion & gestion d’erreurs basique</h3>
+          <div class="flex-content">
+            <ul>
+              <li>
+                Très limité, mais certains protocoles comme ICMP (utilisé dans ping) permettent de
+                signaler des erreurs ou des problèmes de connectivité
+              </li>
+            </ul>
+          </div>
+          <div class="subTitle">Les protocoles</div>
+          <div class="flex-content">
+            <ul>
+              <li>
+                <span class="strongu">IP (Internet Protocol)</span> – principal protocole d’adressage et
+                de routage
+              </li>
+              <li>
+                <span class="strongu">ICMP (Internet Control Message Protocol)</span> – diagnostic réseau
+                (ping, traceroute)
+              </li>
+              <li>
+                <span class="strongu">ARP (Address Resolution Protocol)</span> – résout une adresse IP en
+                adresse MAC (même si ARP est parfois considéré entre les couches 2 et 3) IGMP (Internet
+                Group Management Protocol) – gestion du multicast
+              </li>
+              <li>
+                <span class="strongu">IGMP (Internet Group Management Protocol)</span> – gestion du
+                multicast
+              </li>
+            </ul>
+          </div>
+          <div class="subTitle">Divers appareils de la couche 3</div>
+          <h3><strong>Le routeur</strong></h3>
+          <div class="flex-content">
+            <ul>
+              <li>Système qui permet de relier différents réseaux entre eux</li>
+              <li>Il a pour rôle de diriger et de router les informations vers la bonne destination</li>
+              <li>
+                C’est aussi la porte d’accès vers l’extérieur(Internet) : Adresse de la Passerelle dans
+                la configuration TCP-IP de l’ordinateur
+              </li>
+            </ul>
+          </div>
+          <div class="flex-content">
+            <img
+              src="../images/router.avif"
+              alt="Router Cisco"
+              class="sat"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <h3>Le FireWall ou Pare-feu</h3>
+          <div class="flex-content">
+            <ul>
+              <li>
+                Fonctionne aussi à la couche 3 pour bloquer/autoriser le trafic selon les adresses IP
+              </li>
+            </ul>
+            <img
+              src="../images/par-feu.png"
+              alt="Pare-Feu"
+              class="wireless"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <!-- CTA  -->
+          <div class="cta">
+            <a href="two.html">
+              <div class="previous">Couche 2</div>
+            </a>
+            <a href="../index.html">
+              <div class="return">Accueil</div>
+            </a>
+            <a href="four.html">
+              <div class="next">Couche 4</div>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
     <footer>
       <p>&copy; 2025 - Projet de Lagneaux Myron</p>
     </footer>

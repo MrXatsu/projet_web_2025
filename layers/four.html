@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/layers.css">
+    <link rel="stylesheet" href="../style/layers.css" />
+    <script src="../script.js" defer></script>
     <title>Modèle OSI : Couche 4</title>
   </head>
   <body>
@@ -14,49 +15,39 @@
       <p>Détail sur la quatrième couche</p>
     </header>
     <!-- CTA  -->
-    <div class="cta">
-      <a href="three.html">
-        <div class="previous">
-          Couche 3
-        </div>
-      </a>
-      <a href="../index.html">
-        <div class="return">
-          Accueil
-        </div>
-      </a>
-      <a href="five.html">
-        <div class="next">
-          Couche 5
-        </div>
-      </a>
-    </div>
-    <!-- Corps de la page  -->
-    <div class="container">
-      <div class="details">
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
-          necessitatibus quam voluptate et! Quo magnam voluptatum, porro ad
-          deleniti odio consectetur officiis debitis, nostrum commodi ipsum
-          molestias dolorem aspernatur vitae illum error saepe voluptatem
-          corrupti accusamus necessitatibus a ipsam? Voluptatibus nam quisquam
-          quaerat blanditiis deleniti quam, deserunt, labore, nemo eum
-          cupiditate ipsa! Aliquid suscipit repellendus, voluptatum ratione,
-          quibusdam doloremque voluptatibus quam totam rerum, dolorem quidem.
-          Molestiae nostrum, animi harum reiciendis id quam saepe repellat
-          beatae tempora explicabo vitae optio impedit non hic in. Soluta,
-          fugit? Quae sit, quos rerum fugit ex labore iste, dolor ratione
-          mollitia cumque, ipsum delectus incidunt iure ea! Aliquam optio vitae
-          inventore vero aperiam magnam in eum perferendis impedit iste minus
-          autem facilis ad animi laudantium magni, nihil obcaecati! At fugiat
-          consectetur et nulla veritatis nesciunt blanditiis vero, aut quae
-          cumque ad culpa omnis hic non cupiditate ipsa officia, modi eveniet.
-          Est qui omnis totam cum.
-        </p>
+    <main>
+      <div class="cta">
+        <a href="three.html">
+          <div class="previous">Couche 3</div>
+        </a>
+        <a href="../index.html">
+          <div class="return">Accueil</div>
+        </a>
+        <a href="five.html">
+          <div class="next">Couche 5</div>
+        </a>
       </div>
-    </div>
+      <!-- Corps de la page  -->
+      <div class="container">
+        <div class="title"><h1>Couche 4 : Le transport</h1></div>
+        <div class="details">
+          <p>
+            La couche Transport récupère les données à partir de la Session et les organisent en segments
+            avant de les envoyer vers la couche 3, Réseau et inversement après que les données arrivent
+            sur l’appareil récepteur. Elle est responsable de contrôler le flux et reporter les erreurs
+            inter-réseau en s’assurant que les données reçues sont complètes.
+          </p>
+        </div>
+      </div>
+    </main>
     <footer>
       <p>&copy; 2025 - Projet de Lagneaux Myron</p>
     </footer>
+    <!-- Lightbox pour afficher l'image en grand -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Image agrandie" />
+    </div>
+    <!--Bouton pour aller vers le haut-->
+    <button id="scrollToTop" title="Remonter en haut">⬆</button>
   </body>
 </html>

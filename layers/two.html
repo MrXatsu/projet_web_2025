@@ -14,154 +14,156 @@
       <h1>Le Modèle OSI</h1>
       <p>Détail sur la deuxième couche</p>
     </header>
-    <!-- CTA -->
-    <div class="cta">
-      <a href="one.html">
-        <div class="previous">Couche 1</div>
-      </a>
-      <a href="../index.html">
-        <div class="return">Accueil</div>
-      </a>
-      <a href="three.html">
-        <div class="next">Couche 3</div>
-      </a>
-    </div>
-    <!-- Corps de la page  -->
-    <div class="container">
-      <div class="title">
-        <h3>Couche 2 : Liaison de données</h3>
+    <main>
+      <!-- CTA -->
+      <div class="cta">
+        <a href="one.html">
+          <div class="previous">Couche 1</div>
+        </a>
+        <a href="../index.html">
+          <div class="return">Accueil</div>
+        </a>
+        <a href="three.html">
+          <div class="next">Couche 3</div>
+        </a>
       </div>
-      <!--Brève explication de la couche-->
-      <div class="details">
-        <p>
-          <strong>La couche liaison de données</strong> permet de faciliter le transfert de données entre
-          deux appareils sur le même réseau. Pendant la circulation, la couche prend les paquets de la
-          couche Réseau et les divisent en trames. Additionnellement, elle est responsable de contrôler
-          le flux et reporter les erreurs intra-réseau
-        </p>
+      <!-- Corps de la page  -->
+      <div class="container">
+        <div class="title">
+          <h3>Couche 2 : Liaison de données</h3>
+        </div>
+        <!--Brève explication de la couche-->
+        <div class="details">
+          <p>
+            <strong>La couche liaison de données</strong> permet de faciliter le transfert de données
+            entre deux appareils sur le même réseau. Pendant la circulation, la couche prend les paquets
+            de la couche Réseau et les divisent en trames. Additionnellement, elle est responsable de
+            contrôler le flux et reporter les erreurs intra-réseau
+          </p>
+        </div>
+        <!--Détails sur toute la couche-->
+        <div class="details">
+          <div class="subTitle">Fonctions principales</div>
+          <div class="flex-content">
+            <ul>
+              <li>
+                Encapsulation des trames : Elle organise les données en trames, une unité de transmission
+                au niveau 2
+              </li>
+              <li>
+                Adressage physique : Elle utilise des adresses MAC pour identifier de manière unique les
+                machines sur un réseau local
+              </li>
+              <li>
+                Contrôle d’erreurs : Elle peut détecter (et parfois corriger) les erreurs de transmission
+              </li>
+              <li>
+                Contrôle de flux : Elle régule la vitesse d’envoi pour éviter que le récepteur ne soit
+                submergé
+              </li>
+              <li>
+                Détection des collisions (Ethernet) et gestion de l'accès au support : Surtout en
+                environnement partagé
+              </li>
+            </ul>
+          </div>
+          <div class="subTitle">Sous-couches</div>
+          <div class="flex-content">
+            <ul>
+              <li>
+                <span class="strongu">LLC (Logical Link Control):</span> gère la communication avec la
+                couche 3 (Réseau) et le contrôle d’erreurs
+              </li>
+              <li>
+                <span class="strongu">MAC (Media Access Control):</span> gère l'accès au support réseau
+                et l’adressage MAC
+              </li>
+            </ul>
+          </div>
+          <div class="subTitle">Les normes de la couche 2</div>
+          <div class="flex-content">
+            <ul>
+              <li>Ethernet</li>
+              <li>Wi-Fi (IEEE 802.11)</li>
+              <li>PPP (Point-to-Point Protocol)</li>
+              <li>Switches (commutateurs) opèrent à cette couche</li>
+            </ul>
+          </div>
+          <div class="subTitle">Divers appareils travaillant sur la couche 2</div>
+          <h3>Le switch ou commutateur</h3>
+          <div class="flex-content">
+            <ul>
+              <li>
+                Le commutateur est un système assurant l'interconnexion de stations ou de segments d'un
+                LAN en leur attribuant l'intégralité de la bande passante, à l'inverse du concentrateur
+                qui la partage
+              </li>
+              <li>
+                Les commutateurs ont donc été introduits pour augmenter la bande passante globale d’un
+                réseau d’entreprise et sont une évolution des concentrateurs Ethernet (ou hubs)
+              </li>
+              <li>
+                Ils ne mettent en œuvre aucune fonctionnalité de sécurité (certains commutateurs savent
+                gérer toutefois l'adresse ethernet (@ MAC)), hormis l’amélioration de la disponibilité
+              </li>
+              <li>
+                Plusieurs communications simultanées peuvent avoir lieu à condition qu’elles concernent
+                des ports différents du commutateur
+              </li>
+              <li>
+                La bande passante disponible n’est plus de 10 Mbit/s partagés entre tous les
+                utilisateurs, mais n x 10 Mbit/s
+              </li>
+            </ul>
+          </div>
+          <div class="flex-content">
+            <img
+              src="../images/ciscoswitch.png"
+              alt="switch cisco"
+              class="sat"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <h3>Le bridge ou pont</h3>
+          <div class="flex-content">
+            <ul>
+              <li>
+                Ce sont des équipements qui décodent les adresses machines et qui peuvent donc décider de
+                faire traverser ou non les paquets (action filtrante);
+              </li>
+              <li>
+                Le principe général du pont est de ne pas faire traverser les trames dont l’émetteur et
+                le destinataire sont du même coté, afin d’éviter du trafic inutile sur le réseau;
+              </li>
+              <li>
+                Il permet d’interconnecter deux réseaux de même topologie, mais qui peuvent fonctionner à
+                des vitesses différentes.
+              </li>
+            </ul>
+          </div>
+          <div class="flex-content">
+            <img
+              src="../images/ciscobridge.webp"
+              alt="Pont/Bridge"
+              class="sat"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <!-- CTA -->
+          <div class="cta">
+            <a href="one.html">
+              <div class="previous">Couche 1</div>
+            </a>
+            <a href="../index.html">
+              <div class="return">Accueil</div>
+            </a>
+            <a href="three.html">
+              <div class="next">Couche 3</div>
+            </a>
+          </div>
+        </div>
       </div>
-      <!--Détails sur toute la couche-->
-      <div class="details">
-        <div class="subTitle">Fonctions principales</div>
-        <div class="flex-content">
-          <ul>
-            <li>
-              Encapsulation des trames : Elle organise les données en trames, une unité de transmission
-              au niveau 2
-            </li>
-            <li>
-              Adressage physique : Elle utilise des adresses MAC pour identifier de manière unique les
-              machines sur un réseau local
-            </li>
-            <li>
-              Contrôle d’erreurs : Elle peut détecter (et parfois corriger) les erreurs de transmission
-            </li>
-            <li>
-              Contrôle de flux : Elle régule la vitesse d’envoi pour éviter que le récepteur ne soit
-              submergé
-            </li>
-            <li>
-              Détection des collisions (Ethernet) et gestion de l'accès au support : Surtout en
-              environnement partagé
-            </li>
-          </ul>
-        </div>
-        <div class="subTitle">Sous-couches</div>
-        <div class="flex-content">
-          <ul>
-            <li>
-              <span class="strongu">LLC (Logical Link Control):</span> gère la communication avec la
-              couche 3 (Réseau) et le contrôle d’erreurs
-            </li>
-            <li>
-              <span class="strongu">MAC (Media Access Control):</span> gère l'accès au support réseau et
-              l’adressage MAC
-            </li>
-          </ul>
-        </div>
-        <div class="subTitle">Les normes de la couche 2</div>
-        <div class="flex-content">
-          <ul>
-            <li>Ethernet</li>
-            <li>Wi-Fi (IEEE 802.11)</li>
-            <li>PPP (Point-to-Point Protocol)</li>
-            <li>Switches (commutateurs) opèrent à cette couche</li>
-          </ul>
-        </div>
-        <div class="subTitle">Divers appareils travaillant sur la couche 2</div>
-        <h3>Le switch ou commutateur</h3>
-        <div class="flex-content">
-          <ul>
-            <li>
-              Le commutateur est un système assurant l'interconnexion de stations ou de segments d'un LAN
-              en leur attribuant l'intégralité de la bande passante, à l'inverse du concentrateur qui la
-              partage
-            </li>
-            <li>
-              Les commutateurs ont donc été introduits pour augmenter la bande passante globale d’un
-              réseau d’entreprise et sont une évolution des concentrateurs Ethernet (ou hubs)
-            </li>
-            <li>
-              Ils ne mettent en œuvre aucune fonctionnalité de sécurité (certains commutateurs savent
-              gérer toutefois l'adresse ethernet (@ MAC)), hormis l’amélioration de la disponibilité
-            </li>
-            <li>
-              Plusieurs communications simultanées peuvent avoir lieu à condition qu’elles concernent des
-              ports différents du commutateur
-            </li>
-            <li>
-              La bande passante disponible n’est plus de 10 Mbit/s partagés entre tous les utilisateurs,
-              mais n x 10 Mbit/s
-            </li>
-          </ul>
-        </div>
-        <div class="flex-content">
-          <img
-            src="../images/ciscoswitch.png"
-            alt="switch cisco"
-            class="sat"
-            onclick="openLightbox(this.src)"
-          />
-        </div>
-        <h3>Le bridge ou pont</h3>
-        <div class="flex-content">
-          <ul>
-            <li>
-              Ce sont des équipements qui décodent les adresses machines et qui peuvent donc décider de
-              faire traverser ou non les paquets (action filtrante);
-            </li>
-            <li>
-              Le principe général du pont est de ne pas faire traverser les trames dont l’émetteur et le
-              destinataire sont du même coté, afin d’éviter du trafic inutile sur le réseau;
-            </li>
-            <li>
-              Il permet d’interconnecter deux réseaux de même topologie, mais qui peuvent fonctionner à
-              des vitesses différentes.
-            </li>
-          </ul>
-        </div>
-        <div class="flex-content">
-          <img
-            src="../images/ciscobridge.webp"
-            alt="Pont/Bridge"
-            class="sat"
-            onclick="openLightbox(this.src)"
-          />
-        </div>
-        <!-- CTA -->
-        <div class="cta">
-          <a href="one.html">
-            <div class="previous">Couche 1</div>
-          </a>
-          <a href="../index.html">
-            <div class="return">Accueil</div>
-          </a>
-          <a href="three.html">
-            <div class="next">Couche 3</div>
-          </a>
-        </div>
-      </div>
-    </div>
+    </main>
     <footer>
       <p>&copy; 2025 - Projet de Lagneaux Myron</p>
     </footer>

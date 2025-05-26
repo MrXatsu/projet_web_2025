@@ -14,343 +14,354 @@
       <h1>Le Modèle OSI</h1>
       <p>Détail sur la première couche</p>
     </header>
-    <!-- CTA -->
-    <div class="cta">
-      <a href="../index.html">
-        <div class="return">Accueil</div>
-      </a>
-      <a href="two.html">
-        <div class="next">Couche 2</div>
-      </a>
-    </div>
-    <!-- Corps de la page  -->
-    <div class="container">
-      <div class="title">
-        <h1>Couche 1 : Physique</h1>
+    <main>
+      <!-- CTA -->
+      <div class="cta">
+        <a href="../index.html">
+          <div class="return">Accueil</div>
+        </a>
+        <a href="two.html">
+          <div class="next">Couche 2</div>
+        </a>
       </div>
-      <div class="details">
-        <p>
-          <strong>La couche Physique :</strong> La couche physique est chargée de la transmission
-          effective des signaux électriques, radiofréquences ou optiques entre les interlocuteurs. Son
-          service est généralement limité à l'émission et la réception d'un bit ou d'un train de bits
-          continu (notamment pour les supports synchrones comme la fibre optique). Cette couche est
-          chargée de la conversion entre bits et signaux électriques ou optiques. Elle est en pratique
-          toujours réalisée par un circuit électronique spécifique.
-        </p>
-      </div>
-      <div class="details">
-        <h2><strong>Supports physiques :</strong></h2>
-        <!--UTP/STP-->
-        <div class="subTitle"><strong>Les paires torsadées :</strong></div>
-        <br />
-        <p>
-          Les paires torsadées, plus communément appelé câble ethernet, sont des câbles où comme son nom
-          l'indique, sont des câbles où de fin câbles de cuivre sont entrelacés (torsadées) et par
-          paires.
-        </p>
-        <br />
-        <div class="subTitle">
-          Le fait que les câbles de cuivres soient torsadées présente plusieurs avantages :
+      <!-- Corps de la page  -->
+      <div class="container">
+        <div class="title">
+          <h1>Couche 1 : Physique</h1>
         </div>
-        <br />
-        <div class="utp">
-          <ul>
-            <li>
-              <strong>Réduction des interférences électromagnétiques (EMI) :</strong> les perturbations
-              affectent les deux fils de façon similaire, donc elles peuvent être annulées.
-            </li>
-            <li>
-              <strong>Réduction de la diaphonie (crosstalk) :</strong> le bruit généré entre paires
-              voisines est atténué.
-            </li>
-            <li><strong>Meilleure transmission du signal</strong> sur de plus longues distances.</li>
-          </ul>
+        <div class="details">
+          <p>
+            <strong>La couche Physique :</strong> La couche physique est chargée de la transmission
+            effective des signaux électriques, radiofréquences ou optiques entre les interlocuteurs. Son
+            service est généralement limité à l'émission et la réception d'un bit ou d'un train de bits
+            continu (notamment pour les supports synchrones comme la fibre optique). Cette couche est
+            chargée de la conversion entre bits et signaux électriques ou optiques. Elle est en pratique
+            toujours réalisée par un circuit électronique spécifique.
+          </p>
         </div>
-        <div class="subTitle">Les normes :</div>
-        <div class="utp">
-          <p>Longueur maximum = <u> 150 mètres</u></p>
-          <h3>Différentes catégories :</h3>
+        <div class="details">
+          <h2><strong>Supports physiques :</strong></h2>
+          <!--UTP/STP-->
+          <div class="subTitle"><strong>Les paires torsadées :</strong></div>
+          <br />
+          <p>
+            Les paires torsadées, plus communément appelé câble ethernet, sont des câbles où comme son
+            nom l'indique, sont des câbles où de fin câbles de cuivre sont entrelacés (torsadées) et par
+            paires.
+          </p>
+          <br />
+          <div class="subTitle">
+            Le fait que les câbles de cuivres soient torsadées présente plusieurs avantages :
+          </div>
+          <br />
+          <div class="utp">
+            <ul>
+              <li>
+                <strong>Réduction des interférences électromagnétiques (EMI) :</strong> les perturbations
+                affectent les deux fils de façon similaire, donc elles peuvent être annulées.
+              </li>
+              <li>
+                <strong>Réduction de la diaphonie (crosstalk) :</strong> le bruit généré entre paires
+                voisines est atténué.
+              </li>
+              <li><strong>Meilleure transmission du signal</strong> sur de plus longues distances.</li>
+            </ul>
+          </div>
+          <div class="subTitle">Les normes :</div>
+          <div class="utp">
+            <p>Longueur maximum = <u> 150 mètres</u></p>
+            <h3>Différentes catégories :</h3>
+            <div class="flex-content">
+              <ul>
+                <li><strong>Cat 3 :</strong> 10BaseT (10 Mbits/s)</li>
+                <li><strong>Cat 5 :</strong> 100BaseT (100 Mbits/s)</li>
+                <li><strong>Cat 6,7 :</strong> 1000BaseTX (1 Gbits/s)</li>
+              </ul>
+              <img
+                src="../images/utp cables.png"
+                alt="câble utp"
+                class="thumbnail"
+                onclick="openLightbox(this.src)"
+              />
+            </div>
+          </div>
+          <p>Utiliser le plus souvent pour une topologie en étoile</p>
+          <!--Coaxiale-->
+          <div class="subTitle"><strong>Les câbles coaxiaux</strong></div>
+          <p>
+            Le câble coaxial est un type de câble composé d’un conducteur central entouré d’un isolant et
+            d’un blindage, utilisé notamment pour la transmission de données Internet via les réseaux
+            câblés.
+          </p>
+          <br />
+          <p>Deux types de câbles coaxiaux pour la transmission internet :</p>
           <div class="flex-content">
             <ul>
-              <li><strong>Cat 3 :</strong> 10BaseT (10 Mbits/s)</li>
-              <li><strong>Cat 5 :</strong> 100BaseT (100 Mbits/s)</li>
-              <li><strong>Cat 6,7 :</strong> 1000BaseTX (1 Gbits/s)</li>
+              <h3>Coaxial jaune :</h3>
+              <li><strong>Topologie utilisée :</strong>BUS;</li>
+              <li><strong>Norme :</strong> 10base5;</li>
+              <li><strong>Longueur max : </strong>500 mètres.</li>
+              <img
+                src="../images/coaxial-10B5.jpg"
+                alt="coaxial 10Base5"
+                class="taille"
+                onclick="openLightbox(this.src)"
+              />
+            </ul>
+            <ul>
+              <h3>Coaxiale noir-gris</h3>
+              <li><strong>Topologie utilisée : </strong>BUS;</li>
+              <li><strong>Norme : </strong> 10Base2;</li>
+              <li><strong>Longueur max : </strong>185 mètres.</li>
+              <img
+                src="../images/10B2.jpg"
+                alt="coaxial 10Base2"
+                class="taille"
+                onclick="openLightbox(this.src)"
+              />
+            </ul>
+          </div>
+          <div class="flex-content">
+            <ul>
+              <img
+                src="../images/Cable-coaxial.webp"
+                alt="câble coaxial"
+                class="thumbnail"
+                onclick="openLightbox(this.src)"
+              />
+            </ul>
+          </div>
+          <!--Fibre Optique-->
+          <div class="subTitle">La fibre optique</div>
+          <p>
+            La fibre optique est un câble constitué de fins fils de verre ou de plastique capables de
+            transmettre des données à très haute vitesse sous forme de signaux lumineux.
+          </p>
+          <br />
+          <p>
+            La fibre optique présente l'avantage de n'avoir
+            <span class="strongu">aucune</span> perturbation magnétique
+          </p>
+          <br />
+          <p>Deux types de fibre optique :</p>
+          <div class="flex-content">
+            <ul>
+              <h3>Monomode :</h3>
+              <li>Transmition axiale;</li>
+              <li>Un faisceau unique;</li>
+              <li>Grande bande passante;</li>
+              <li>Peu de perte.</li>
+              <img
+                src="../images/composition fibre.webp"
+                alt="composition fibre"
+                class="taille"
+                onclick="openLightbox(this.src)"
+              />
+            </ul>
+            <ul>
+              <h3>Multimode :</h3>
+              <li>Plusieurs faisceaux simultanés;</li>
+              <li>Transmition zigzag;</li>
+              <li>Gradient d'indice -> trajectoires courbes.</li>
+              <img
+                src="../images/mono-multimode.png"
+                alt="Type fibre optique"
+                class="taille"
+                onclick="openLightbox(this.src)"
+              />
+            </ul>
+          </div>
+          <!--Sans fil-->
+          <div class="subTitle">La connexion sans fil</div>
+          <p>
+            La transmission sans fil permet d’échanger des données par ondes radio, sans support
+            physique, et est couramment utilisée dans les connexions Wi-Fi, Bluetooth ou mobiles.
+          </p>
+          <br />
+          <p>Plusieurs types de moyens de communications sans fil :</p>
+          <h3>Faisceau Hertzien</h3>
+          <div class="flex-content">
+            <ul>
+              <li><span class="strongu">Distance:</span> Quelques kilomètres;</li>
+              <li><span class="strongu">Débit:</span> de 2 à 30 Mb/s;</li>
+              <li>Sujet à la perturbation</li>
+              <li>Limité à cause de la courbe terrestre</li>
             </ul>
             <img
-              src="../images/utp cables.png"
-              alt="câble utp"
-              class="thumbnail"
+              src="../images/faisceau-hertzien.png"
+              alt="faisceau Hertzien"
+              class="wireless"
               onclick="openLightbox(this.src)"
             />
           </div>
-        </div>
-        <p>Utiliser le plus souvent pour une topologie en étoile</p>
-        <!--Coaxiale-->
-        <div class="subTitle"><strong>Les câbles coaxiaux</strong></div>
-        <p>
-          Le câble coaxial est un type de câble composé d’un conducteur central entouré d’un isolant et
-          d’un blindage, utilisé notamment pour la transmission de données Internet via les réseaux
-          câblés.
-        </p>
-        <br />
-        <p>Deux types de câbles coaxiaux pour la transmission internet :</p>
-        <div class="flex-content">
-          <ul>
-            <h3>Coaxial jaune :</h3>
-            <li><strong>Topologie utilisée :</strong>BUS;</li>
-            <li><strong>Norme :</strong> 10base5;</li>
-            <li><strong>Longueur max : </strong>500 mètres.</li>
+          <h3>Radio Wi-Fi</h3>
+          <div class="flex-content">
+            <ul>
+              <li><span class="strongu">Distance:</span> 30 mètres à quelques kilomètres</li>
+              <li><span class="strongu">Débit:</span> 54Mb/s</li>
+              <li>Loi stricte</li>
+              <li><span class="strongu">Norme:</span> IEEE 802.11</li>
+            </ul>
             <img
-              src="../images/coaxial-10B5.jpg"
-              alt="coaxial 10Base5"
-              class="taille"
+              src="../images/Wifi.png"
+              alt="Wi-Fi"
+              class="wireless"
               onclick="openLightbox(this.src)"
             />
-          </ul>
-          <ul>
-            <h3>Coaxiale noir-gris</h3>
-            <li><strong>Topologie utilisée : </strong>BUS;</li>
-            <li><strong>Norme : </strong> 10Base2;</li>
-            <li><strong>Longueur max : </strong>185 mètres.</li>
+          </div>
+          <h3>Ondes infrarouges</h3>
+          <div class="flex-content">
+            <ul>
+              <li><span class="strongu">Distance:</span> quelques mètres</li>
+              <li><span class="strongu">Condition:</span> à vue</li>
+              <li><span class="strongu">Débit:</span> quelques Kb/s</li>
+            </ul>
             <img
-              src="../images/10B2.jpg"
-              alt="coaxial 10Base2"
-              class="taille"
+              src="../images/infrarouge.png"
+              alt="infrarouge"
+              class="wireless"
               onclick="openLightbox(this.src)"
             />
-          </ul>
-        </div>
-        <div class="flex-content">
-          <ul>
+          </div>
+          <h3>Laser</h3>
+          <div class="flex-content">
+            <ul>
+              <li><span class="strongu">Distance:</span> raisonnable</li>
+              <li><span class="strongu">Condition:</span> à vue</li>
+              <li><span class="strongu">Débit:</span> plusieurs Mb/s</li>
+              <li>Point à point</li>
+            </ul>
             <img
-              src="../images/Cable-coaxial.webp"
-              alt="câble coaxial"
-              class="thumbnail"
+              src="../images/laser.png"
+              alt="laser"
+              class="wireless"
               onclick="openLightbox(this.src)"
             />
-          </ul>
-        </div>
-        <!--Fibre Optique-->
-        <div class="subTitle">La fibre optique</div>
-        <p>
-          La fibre optique est un câble constitué de fins fils de verre ou de plastique capables de
-          transmettre des données à très haute vitesse sous forme de signaux lumineux.
-        </p>
-        <br />
-        <p>
-          La fibre optique présente l'avantage de n'avoir
-          <span class="strongu">aucune</span> perturbation magnétique
-        </p>
-        <br />
-        <p>Deux types de fibre optique :</p>
-        <div class="flex-content">
-          <ul>
-            <h3>Monomode :</h3>
-            <li>Transmition axiale;</li>
-            <li>Un faisceau unique;</li>
-            <li>Grande bande passante;</li>
-            <li>Peu de perte.</li>
+          </div>
+          <h3>Satellites</h3>
+          <div class="flex-content">
+            <ul>
+              <h3>Géostationnaire</h3>
+              <li><span class="strongu">Distance:</span>36000km</li>
+              <li><span class="strongu">Débit:</span>150Mb/s</li>
+              <li><span class="strongu">Vitesse:</span>1 seconde aller/retour</li>
+            </ul>
+            <ul>
+              <h3>Orbite moyenne</h3>
+              <li><span class="strongu">Distance:</span>5000km-12000Km</li>
+              <li><span class="strongu">Débit:</span>10-40Kb/s</li>
+              <li><span class="strongu">Vitesse:</span>0.2 secondes aller/retour</li>
+            </ul>
+            <ul>
+              <h3>Orbite basse</h3>
+              <li><span class="strongu">Distance:</span>160-2000Km</li>
+              <li><span class="strongu">Débit:</span>150Mb/s minimum</li>
+              <li><span class="strongu">Vitesse:</span>0.1 seconde aller/retour</li>
+            </ul>
+          </div>
+          <div class="flex-content">
             <img
-              src="../images/composition fibre.webp"
-              alt="composition fibre"
-              class="taille"
+              src="../images/sat.png"
+              alt="satellite distance"
+              class="sat"
               onclick="openLightbox(this.src)"
             />
-          </ul>
-          <ul>
-            <h3>Multimode :</h3>
-            <li>Plusieurs faisceaux simultanés;</li>
-            <li>Transmition zigzag;</li>
-            <li>Gradient d'indice -> trajectoires courbes.</li>
             <img
-              src="../images/mono-multimode.png"
-              alt="Type fibre optique"
-              class="taille"
+              src="../images/sta2.png"
+              alt="satellite beam"
+              class="sat"
               onclick="openLightbox(this.src)"
             />
-          </ul>
-        </div>
-        <!--Sans fil-->
-        <div class="subTitle">La connexion sans fil</div>
-        <p>
-          La transmission sans fil permet d’échanger des données par ondes radio, sans support physique,
-          et est couramment utilisée dans les connexions Wi-Fi, Bluetooth ou mobiles.
-        </p>
-        <br />
-        <p>Plusieurs types de moyens de communications sans fil :</p>
-        <h3>Faisceau Hertzien</h3>
-        <div class="flex-content">
-          <ul>
-            <li><span class="strongu">Distance:</span> Quelques kilomètres;</li>
-            <li><span class="strongu">Débit:</span> de 2 à 30 Mb/s;</li>
-            <li>Sujet à la perturbation</li>
-            <li>Limité à cause de la courbe terrestre</li>
-          </ul>
-          <img
-            src="../images/faisceau-hertzien.png"
-            alt="faisceau Hertzien"
-            class="wireless"
-            onclick="openLightbox(this.src)"
-          />
-        </div>
-        <h3>Radio Wi-Fi</h3>
-        <div class="flex-content">
-          <ul>
-            <li><span class="strongu">Distance:</span> 30 mètres à quelques kilomètres</li>
-            <li><span class="strongu">Débit:</span> 54Mb/s</li>
-            <li>Loi stricte</li>
-            <li><span class="strongu">Norme:</span> IEEE 802.11</li>
-          </ul>
-          <img src="../images/Wifi.png" alt="Wi-Fi" class="wireless" onclick="openLightbox(this.src)" />
-        </div>
-        <h3>Ondes infrarouges</h3>
-        <div class="flex-content">
-          <ul>
-            <li><span class="strongu">Distance:</span> quelques mètres</li>
-            <li><span class="strongu">Condition:</span> à vue</li>
-            <li><span class="strongu">Débit:</span> quelques Kb/s</li>
-          </ul>
-          <img
-            src="../images/infrarouge.png"
-            alt="infrarouge"
-            class="wireless"
-            onclick="openLightbox(this.src)"
-          />
-        </div>
-        <h3>Laser</h3>
-        <div class="flex-content">
-          <ul>
-            <li><span class="strongu">Distance:</span> raisonnable</li>
-            <li><span class="strongu">Condition:</span> à vue</li>
-            <li><span class="strongu">Débit:</span> plusieurs Mb/s</li>
-            <li>Point à point</li>
-          </ul>
-          <img src="../images/laser.png" alt="laser" class="wireless" onclick="openLightbox(this.src)" />
-        </div>
-        <h3>Satellites</h3>
-        <div class="flex-content">
-          <ul>
-            <h3>Géostationnaire</h3>
-            <li><span class="strongu">Distance:</span>36000km</li>
-            <li><span class="strongu">Débit:</span>150Mb/s</li>
-            <li><span class="strongu">Vitesse:</span>1 seconde aller/retour</li>
-          </ul>
-          <ul>
-            <h3>Orbite moyenne</h3>
-            <li><span class="strongu">Distance:</span>5000km-12000Km</li>
-            <li><span class="strongu">Débit:</span>10-40Kb/s</li>
-            <li><span class="strongu">Vitesse:</span>0.2 secondes aller/retour</li>
-          </ul>
-          <ul>
-            <h3>Orbite basse</h3>
-            <li><span class="strongu">Distance:</span>160-2000Km</li>
-            <li><span class="strongu">Débit:</span>150Mb/s minimum</li>
-            <li><span class="strongu">Vitesse:</span>0.1 seconde aller/retour</li>
-          </ul>
-        </div>
-        <div class="flex-content">
-          <img
-            src="../images/sat.png"
-            alt="satellite distance"
-            class="sat"
-            onclick="openLightbox(this.src)"
-          />
-          <img
-            src="../images/sta2.png"
-            alt="satellite beam"
-            class="sat"
-            onclick="openLightbox(this.src)"
-          />
-        </div>
-        <div class="subTitle">Divers appareils travaillant sur la couche 1</div>
-        <h3>Le CPL : Courant Porteur en Ligne</h3>
-        <div class="flex-content">
-          <ul>
-            <li><span class="strongu">Débit:</span></li>
+          </div>
+          <div class="subTitle">Divers appareils travaillant sur la couche 1</div>
+          <h3>Le CPL : Courant Porteur en Ligne</h3>
+          <div class="flex-content">
             <ul>
-              <li>85 Mb/s</li>
-              <li>200 Mb/s</li>
-              <li>500 Mb/s</li>
+              <li><span class="strongu">Débit:</span></li>
+              <ul>
+                <li>85 Mb/s</li>
+                <li>200 Mb/s</li>
+                <li>500 Mb/s</li>
+              </ul>
             </ul>
-          </ul>
-          <ul>
-            <li><span class="strongu">Avantages:</span></li>
             <ul>
-              <li>Aucun câble</li>
-              <li>Coût du boitier raisonnable</li>
+              <li><span class="strongu">Avantages:</span></li>
+              <ul>
+                <li>Aucun câble</li>
+                <li>Coût du boitier raisonnable</li>
+              </ul>
             </ul>
-          </ul>
-          <ul>
-            <li><span class="strongu">Inconvénient</span></li>
             <ul>
-              <li>Perturbations par les appareils électriques</li>
+              <li><span class="strongu">Inconvénient</span></li>
+              <ul>
+                <li>Perturbations par les appareils électriques</li>
+              </ul>
             </ul>
-          </ul>
-        </div>
-        <div class="flex-content">
-          <img
-            src="../images/cpl-schema.webp"
-            alt="Schéma CPL"
-            class="sat"
-            onclick="openLightbox(this.src)"
-          />
-          <img src="../images/cpl.png" alt="CPL" class="wireless" onclick="openLightbox(this.src)" />
-        </div>
-        <h3>Répéteurs</h3>
-        <div class="flex-content">
-          <ul>
-            <li><span class="strongu">Fonctions:</span></li>
+          </div>
+          <div class="flex-content">
+            <img
+              src="../images/cpl-schema.webp"
+              alt="Schéma CPL"
+              class="sat"
+              onclick="openLightbox(this.src)"
+            />
+            <img src="../images/cpl.png" alt="CPL" class="wireless" onclick="openLightbox(this.src)" />
+          </div>
+          <h3>Répéteurs</h3>
+          <div class="flex-content">
             <ul>
-              <li>La répétition des bits d’un segment à l’autre</li>
-              <li>La régénération du signal pour compenser son affaiblissement.</li>
-              <li>Le changement de média (passer d’un câble coaxial à une paire torsadée)</li>
+              <li><span class="strongu">Fonctions:</span></li>
+              <ul>
+                <li>La répétition des bits d’un segment à l’autre</li>
+                <li>La régénération du signal pour compenser son affaiblissement.</li>
+                <li>Le changement de média (passer d’un câble coaxial à une paire torsadée)</li>
+              </ul>
             </ul>
-          </ul>
-        </div>
-        <div class="flex-content">
-          <img
-            src="../images/schema-repeter.png"
-            alt="Schéma répéteur"
-            class="sat"
-            onclick="openLightbox(this.src)"
-          />
-          <img
-            src="../images/repeter.png"
-            alt="exemple répéteur"
-            class="wireless"
-            onclick="openLightbox(this.src)"
-          />
-        </div>
-        <h3>Hub ou concentrateur</h3>
-        <div class="flex-content">
-          <ul>
-            <li>C’est un boîtier qui a la fonction de répéteur</li>
-            <li>Sa fonction principale est de pouvoir concentrer plusieurs lignes en une seule</li>
-            <li>On peut y connecter plusieurs stations, dont le nombre dépend du type de HUB</li>
-            <li>Un HUB sera connecté sur un autre HUB (en cascade)</li>
+          </div>
+          <div class="flex-content">
+            <img
+              src="../images/schema-repeter.png"
+              alt="Schéma répéteur"
+              class="sat"
+              onclick="openLightbox(this.src)"
+            />
+            <img
+              src="../images/repeter.png"
+              alt="exemple répéteur"
+              class="wireless"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <h3>Hub ou concentrateur</h3>
+          <div class="flex-content">
             <ul>
-              <li>Dans ce cas on bascule un des ports en E/R ou l’on utilise un câble croisé</li>
+              <li>C’est un boîtier qui a la fonction de répéteur</li>
+              <li>Sa fonction principale est de pouvoir concentrer plusieurs lignes en une seule</li>
+              <li>On peut y connecter plusieurs stations, dont le nombre dépend du type de HUB</li>
+              <li>Un HUB sera connecté sur un autre HUB (en cascade)</li>
+              <ul>
+                <li>Dans ce cas on bascule un des ports en E/R ou l’on utilise un câble croisé</li>
+              </ul>
             </ul>
-          </ul>
-          <img
-            src="../images/hub.png"
-            alt="exemple hub"
-            class="wireless"
-            onclick="openLightbox(this.src)"
-          />
-        </div>
-        <br />
-        <div class="cta">
-          <a href="../index.html">
-            <div class="return">Accueil</div>
-          </a>
-          <a href="two.html">
-            <div class="next">Couche 2</div>
-          </a>
+            <img
+              src="../images/hub.png"
+              alt="exemple hub"
+              class="wireless"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <br />
+          <div class="cta">
+            <a href="../index.html">
+              <div class="return">Accueil</div>
+            </a>
+            <a href="two.html">
+              <div class="next">Couche 2</div>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-
+    </main>
     <footer>
       <p>&copy; 2025 - Projet de Lagneaux Myron</p>
     </footer>
