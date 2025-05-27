@@ -13,15 +13,15 @@
     <header>
       <h1>Le Modèle OSI</h1>
       <p>Détail sur la quatrième couche</p>
+      <nav>
+        <a href="../index.html"> Accueil </a>
+      </nav>
     </header>
     <!-- CTA  -->
     <main>
       <div class="cta">
         <a href="three.html">
           <div class="previous">Couche 3</div>
-        </a>
-        <a href="../index.html">
-          <div class="return">Accueil</div>
         </a>
         <a href="five.html">
           <div class="next">Couche 5</div>
@@ -32,11 +32,176 @@
         <div class="title"><h1>Couche 4 : Le transport</h1></div>
         <div class="details">
           <p>
-            La couche Transport récupère les données à partir de la Session et les organisent en segments
-            avant de les envoyer vers la couche 3, Réseau et inversement après que les données arrivent
-            sur l’appareil récepteur. Elle est responsable de contrôler le flux et reporter les erreurs
-            inter-réseau en s’assurant que les données reçues sont complètes.
+            <strong>La couche Transport</strong> récupère les données à partir de la Session et les
+            organisent en segments avant de les envoyer vers la couche 3, Réseau et inversement après que
+            les données arrivent sur l’appareil récepteur. Elle est responsable de contrôler le flux et
+            reporter les erreurs inter-réseau en s’assurant que les données reçues sont complètes.
           </p>
+        </div>
+        <div class="details">
+          <div class="subTitle">Fonctions principales</div>
+          <h3>Fiabilité des communications</h3>
+          <div class="flex-content">
+            <ul>
+              <li>
+                Assure que les données arrivent complètes et dans le bon ordre (si le protocole utilisé
+                le permet)
+              </li>
+              <li>Vérifie la bonne réception des segments grâce à des accusés de réception</li>
+            </ul>
+          </div>
+          <h3>Segmentation et réassemblage</h3>
+          <div class="flex-content">
+            <ul>
+              <li>Découpe les données en segments avant de les transmettre à la couche réseau</li>
+              <li>Le destinataire réassemble les segments pour reconstituer le message complet</li>
+            </ul>
+          </div>
+          <h3>Gestion des ports</h3>
+          <div class="flex-content">
+            <ul>
+              <li>
+                Utilise des numéros de port pour identifier l’application source et destination (ex: port
+                80 pour HTTP, 443 pour HTTPS)
+              </li>
+              <li>
+                Permet la multiplexion (plusieurs applications peuvent communiquer sur la même machine en
+                même temps)
+              </li>
+            </ul>
+          </div>
+          <h3>Contrôle de flux</h3>
+          <div class="flex-content">
+            <ul>
+              <li>Régule la quantité de données envoyées pour éviter de surcharger le destinataire</li>
+            </ul>
+          </div>
+          <h3>Détection et correction d’erreurs</h3>
+          <div class="flex-content">
+            <ul>
+              <li>Calcule un checksum pour vérifier l'intégrité des segments</li>
+              <li>Peut retransmettre les segments perdus (avec TCP)</li>
+            </ul>
+          </div>
+          <h3>Contrôle de congestion</h3>
+          <div class="flex-content">
+            <ul>
+              <li>
+                Certains protocoles (comme TCP) détectent une congestion du réseau et réduisent le débit
+                pour limiter les pertes
+              </li>
+            </ul>
+          </div>
+          <div class="subTitle">Protocoles</div>
+          <h3>TCP - Transmission Controle Protocol</h3>
+          <div class="flex-content">
+            <ul>
+              <li>Caractéristiques principales :</li>
+              <ul>
+                <li>
+                  <span class="strongu">Fiable:</span> il garantit que les données arrivent correctement
+                  et dans le bon ordre.
+                </li>
+                <li>
+                  <span class="strongu">Orienté connexion:</span> une connexion est établie avant
+                  l'échange de données.
+                </li>
+                <li>
+                  <span class="strongu">Contrôle d'erreurs:</span> chaque segment contient un checksum
+                  pour vérifier son intégrité
+                </li>
+                <li>
+                  <span class="strongu">Contrôle de flux:</span> il ajuste l’envoi de données selon la
+                  capacité du récepteur.
+                </li>
+                <li>
+                  <span class="strongu">Contrôle de congestion:</span> réduit le débit si le réseau est
+                  saturé
+                </li>
+                <li>
+                  <span class="strongu">Numérotation des segments:</span> chaque segment est numéroté
+                  pour permettre le réassemblage
+                </li>
+                <li>
+                  <span class="strongu">Accusés de réception (ACK):</span> chaque segment reçu est
+                  confirmé par le destinataire
+                </li>
+              </ul>
+            </ul>
+          </div>
+          <div class="flex-content">
+            <ul>
+              <li>Utilisation typique :</li>
+              <ul>
+                <li>Web (HTTP, HTTPS)</li>
+                <li>E-mail (SMTP, IMAP, POP3)</li>
+                <li>Transfert de fichiers (FTP)</li>
+                <li>Connexions distantes (SSH, Telnet)</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="flex-content">
+            <ul>
+              <li>Exemple simplifié</li>
+              <ol type="i">
+                <li>L’ordinateur A envoie un paquet</li>
+                <li>L’ordinateur B répond : « bien reçu ! »</li>
+                <li>Si B ne répond pas, A renvoie le paquet</li>
+                ↪️Transmission fiable mais plus lente, car il y a beaucoup d’échanges de contrôle
+              </ol>
+            </ul>
+            <img
+              src="../images/tcp.png"
+              alt="TCP"
+              class="thumbnail wireless"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <h3>UDP - User Datagram Protocol</h3>
+          <div class="flex-content">
+            <ul>
+              <li>Caractéristiques principales :</li>
+              <ul>
+                <li>
+                  <span class="strongu">Non fiable:</span> pas d’accusé de réception, pas de contrôle
+                  d’ordre
+                </li>
+                <li>
+                  <span class="strongu">Sans connexion:</span> envoie les données sans établir de lien
+                  préalable
+                </li>
+                <li>
+                  <span class="strongu">Pas de surcharge de gestion:</span> donc plus rapide, mais il
+                  peut y avoir des pertes
+                </li>
+                <li>
+                  <span class="strongu">Utilise aussi les ports</span> pour identifier les applications
+                </li>
+              </ul>
+            </ul>
+          </div>
+          <div class="flex-content">
+            <ul>
+              <li>Utilisation typique :</li>
+              <ul>
+                <li>Streaming audio/vidéo (YouTube, Spotify…)</li>
+                <li>Jeux en ligne</li>
+                <li>VoIP (appels Internet)</li>
+                <li>DNS (résolution de noms)</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="flex-content">
+            <ul>
+              <li>Exemple simplifié :</li>
+              <ol type="i">
+                <li>L’ordinateur A envoie un paquet.</li>
+                <li>L’ordinateur B le reçoit (ou pas)</li>
+                ↪️Pas de vérification, pas de retransmission → rapide mais incertain.
+              </ol>
+            </ul>
+            <img src="../images/udp.png" alt="UDP" class="wireless" onclick="openLightbox(this.src)" />
+          </div>
         </div>
       </div>
     </main>

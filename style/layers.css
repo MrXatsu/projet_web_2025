@@ -144,7 +144,8 @@
   max-width: 90%;
   max-height: 90%;
   border-radius: 8px;
-  box-shadow: 0 0 20px white;
+  box-shadow: 0 0 20px #ffffff;
+  background-color: #e6f7ff;
   cursor: zoom-out;
 }
 
