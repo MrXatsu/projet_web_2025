@@ -25,6 +25,13 @@ a {
   color: #003366;
 }
 
+h1,
+h2,
+h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+
 footer {
   background-color: #003366;
   color: white;
