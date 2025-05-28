@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Présentation de la couche 5 du modèle OSI : la couche session." />
+    <meta name="author" content="Myron Lagneaux" />
     <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/layers.css">
+    <link rel="stylesheet" href="../style/layers.css" />
+    <link rel="shortcut icon" href="../images/favicon.ico" />
     <title>Modèle OSI : Couche 5</title>
   </head>
   <body>
@@ -12,49 +15,129 @@
     <header>
       <h1>Le Modèle OSI</h1>
       <p>Détail sur la cinquième couche</p>
+      <nav>
+        <a href="../index.html">Accueil</a>
+      </nav>
     </header>
-    <!-- CTA  -->
+
+    <!-- Navigation entre les couches -->
     <div class="cta">
-      <a href="four.html">
-        <div class="previous">
-          Couche 4
-        </div>
-      </a>
-      <a href="../index.html">
-        <div class="return">
-          Accueil
-        </div>
-      </a>
-      <a href="six.html">
-        <div class="next">
-          Couche 6
-        </div>
-      </a>
+      <a href="four.html"><div class="previous">Couche 4</div></a>
+      <a href="six.html"><div class="next">Couche 6</div></a>
     </div>
-    <!-- Corps de la page  -->
-    <div class="container">
-      <div class="details">
+
+    <!-- Contenu principal -->
+    <main class="container">
+      <section class="title">
+        <h1>Couche 5 : La couche Session</h1>
+      </section>
+
+      <section class="details">
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
-          necessitatibus quam voluptate et! Quo magnam voluptatum, porro ad
-          deleniti odio consectetur officiis debitis, nostrum commodi ipsum
-          molestias dolorem aspernatur vitae illum error saepe voluptatem
-          corrupti accusamus necessitatibus a ipsam? Voluptatibus nam quisquam
-          quaerat blanditiis deleniti quam, deserunt, labore, nemo eum
-          cupiditate ipsa! Aliquid suscipit repellendus, voluptatum ratione,
-          quibusdam doloremque voluptatibus quam totam rerum, dolorem quidem.
-          Molestiae nostrum, animi harum reiciendis id quam saepe repellat
-          beatae tempora explicabo vitae optio impedit non hic in. Soluta,
-          fugit? Quae sit, quos rerum fugit ex labore iste, dolor ratione
-          mollitia cumque, ipsum delectus incidunt iure ea! Aliquam optio vitae
-          inventore vero aperiam magnam in eum perferendis impedit iste minus
-          autem facilis ad animi laudantium magni, nihil obcaecati! At fugiat
-          consectetur et nulla veritatis nesciunt blanditiis vero, aut quae
-          cumque ad culpa omnis hic non cupiditate ipsa officia, modi eveniet.
-          Est qui omnis totam cum.
+          <strong>La couche session</strong> permet l’ouverture et la fermeture de la communication entre
+          deux appareils. Cet intervalle est appelé la session. Cette dernière reste ouverte tant que les
+          données circulent, et se ferme quand il n’y a plus de trafic. Elle synchronise également le
+          transfert de données en cas d’erreur, par exemple en établissant un point de contrôle tous les
+          5 Mo. Si un fichier de 100 Mo est transféré mais qu’une défaillance survient après 52 Mo, la
+          session reprend à 50 Mo au lieu de recommencer.
         </p>
-      </div>
-    </div>
+      </section>
+
+      <section class="details">
+        <h3 class="subTitle">Fonctions principales</h3>
+
+        <div class="flex-content">
+          <ul>
+            <li>
+              Établissement, maintien et fermeture de session
+              <ul>
+                <li>Crée une session de communication entre deux applications.</li>
+                <li>Gère l’ouverture, le maintien actif et la fermeture propre de cette session.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex-content">
+          <ul>
+            <li>
+              Synchronisation
+              <ul>
+                <li>
+                  Ajoute des points de synchronisation (checkpoints) pour reprendre la communication en
+                  cas d'interruption.
+                </li>
+                <li>
+                  Exemple : lors du téléchargement d’un gros fichier, si la connexion est coupée, on peut
+                  reprendre depuis un point précis.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex-content">
+          <ul>
+            <li>
+              Gestion du dialogue
+              <ul>
+                <li>Organise le mode de dialogue entre les deux parties :</li>
+                <li>
+                  <ol type="i">
+                    <li>Half-duplex (une direction à la fois)</li>
+                    <li>Full-duplex (dans les deux sens en même temps)</li>
+                  </ol>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex-content">
+          <ul>
+            <li>
+              Restauration après interruption
+              <ul>
+                <li>
+                  Permet de revenir à un état antérieur en cas de coupure de session (avec des protocoles
+                  qui le permettent).
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <h3 class="subTitle">Exemples de protocoles liés à la couche Session</h3>
+        <div class="utp">
+          <p>
+            <em>NB</em> : dans le modèle OSI strict, peu de protocoles sont exclusivement de couche 5,
+            car dans la pratique, les couches 5, 6, et 7 sont souvent fusionnées.
+          </p>
+          <ul>
+            <li>RPC (Remote Procedure Call)</li>
+            <li>NetBIOS (dans certains contextes)</li>
+            <li>SOCKS (dans le cadre de sessions proxy)</li>
+          </ul>
+        </div>
+        <h3 class="subTitle">Exemples concrets</h3>
+        <div class="flex-content">
+          <ul>
+            <li>
+              Lors d’un appel vocal via Internet, la session permet de
+              <span class="strongu">garder la communication active.</span>
+            </li>
+            <li>
+              Dans une session FTP (transfert de fichiers), on établit une session entre le client et le
+              serveur, qui peut gérer plusieurs fichiers, connexions, ou interruptions.
+            </li>
+          </ul>
+        </div>
+        <div class="cta">
+          <a href="four.html"><div class="previous">Couche 4</div></a>
+          <a href="../index.html"><div class="return">Accueil</div></a>
+          <a href="six.html"><div class="next">Couche 6</div></a>
+        </div>
+      </section>
+    </main>
     <footer>
       <p>&copy; 2025 - Projet de Lagneaux Myron</p>
     </footer>
