@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="stylesheet" href="../style/layers.css" />
     <link rel="shortcut icon" href="../images/favicon.ico" />
+    <script src="../script.js" defer></script>
     <title>Modèle OSI : Couche 5</title>
   </head>
   <body>
@@ -44,7 +45,7 @@
       </section>
 
       <section class="details">
-        <h3 class="subTitle">Fonctions principales</h3>
+        <h2 class="subTitle">Fonctions principales</h2>
 
         <div class="flex-content">
           <ul>
@@ -106,7 +107,7 @@
             </li>
           </ul>
         </div>
-        <h3 class="subTitle">Exemples de protocoles liés à la couche Session</h3>
+        <h2 class="subTitle">Exemples de protocoles liés à la couche Session</h2>
         <div class="utp">
           <p>
             <em>NB</em> : dans le modèle OSI strict, peu de protocoles sont exclusivement de couche 5,
@@ -118,7 +119,7 @@
             <li>SOCKS (dans le cadre de sessions proxy)</li>
           </ul>
         </div>
-        <h3 class="subTitle">Exemples concrets</h3>
+        <h2 class="subTitle">Exemples concrets</h2>
         <div class="flex-content">
           <ul>
             <li>
@@ -131,6 +132,7 @@
             </li>
           </ul>
         </div>
+        <!--CTA-->
         <div class="cta">
           <a href="four.html"><div class="previous">Couche 4</div></a>
           <a href="../index.html"><div class="return">Accueil</div></a>
@@ -141,5 +143,11 @@
     <footer>
       <p>&copy; 2025 - Projet de Lagneaux Myron</p>
     </footer>
+    <!-- Lightbox pour afficher l'image en grand -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Image agrandie" />
+    </div>
+    <!--Bouton pour aller vers le haut-->
+    <button id="scrollToTop" title="Remonter en haut">⬆</button>
   </body>
 </html>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../style/layers.css" />
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="shortcut icon" href="../images/favicon.ico" />
+    <script src="../script.js" defer></script>
     <title>Modèle OSI : Couche 7</title>
   </head>
   <body>
@@ -23,10 +24,11 @@
       </nav>
     </header>
     <!-- CTA  -->
-    <div class="cta singleStart">
+    <div class="cta">
       <a href="six.html">
         <div class="previous">Couche 6</div>
       </a>
+      <a href="#"><div class="next">Encapsulation</div></a>
     </div>
     <!-- Corps de la page  -->
     <main class="container">
@@ -41,10 +43,21 @@
       </section>
       <section class="details">
         <h2>Explication</h2>
+        <div class="cta">
+          <a href="six.html"><div class="previous">Couche 6</div></a>
+          <a href="../index.html"><div class="return">Accueil</div></a>
+          <a href="#"><div class="next">Encapsulation</div></a>
+        </div>
       </section>
     </main>
     <footer>
       <p>&copy; 2025 - Projet de Lagneaux Myron</p>
     </footer>
+    <!-- Lightbox pour afficher l'image en grand -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Image agrandie" />
+    </div>
+    <!--Bouton pour aller vers le haut-->
+    <button id="scrollToTop" title="Remonter en haut">⬆</button>
   </body>
 </html>

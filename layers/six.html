@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="stylesheet" href="../style/layers.css" />
     <link rel="shortcut icon" href="../images/favicon.ico" />
+    <script src="../script.js" defer></script>
     <title>Modèle OSI : Couche 6</title>
   </head>
   <body>
@@ -43,10 +44,98 @@
           chiffrement de l’expéditeur.
         </p>
       </section>
-      <section class="details"></section>
+      <section class="details">
+        <h2 class="subTitle">Fonctions principales</h2>
+        <div class="flex-content">
+          <ol class="utp" type="I">
+            <li>
+              <h3>Traduction de formats de données</h3>
+              <ul>
+                <li>
+                  Convertit les données d’un format d’application (par ex. JSON, XML, JPEG, MP3…) vers un
+                  format standard de transmission, et inversement.
+                </li>
+                <li>
+                  Ex : un fichier texte encodé en UTF-8 peut être converti en ASCII selon les besoins du
+                  destinataire.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Chiffrement / déchiffrement</h3>
+              <ul>
+                <li>
+                  Gère la sécurité des données en les chiffrant avant envoi et en les déchiffrant à la
+                  réception.
+                </li>
+                <li>Ex : TLS/SSL peut être partiellement considéré comme intervenant à cette couche.</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Compression / décompression</h3>
+              <ul>
+                <li>Réduit la taille des données pour accélérer leur transmission.</li>
+                <li>
+                  Ex : les images sont compressées (JPEG, PNG), les vidéos aussi (MPEG, MP4), parfois à
+                  cette étape.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+        <img
+          src="../images/layer6.png"
+          alt="Schéma de la couche 6"
+          class="full"
+          onclick="openLightbox(this.src)"
+        />
+        <h2 class="subTitle">Exemples de formats ou technologies associés à la couche Présentation :</h2>
+        <div class="flex-content">
+          <table class="styled-table utp">
+            <th>Type de transformation</th>
+            <th>Exemples</th>
+            <tr>
+              <td>Formats de données</td>
+              <td>JSON, XML, CSV</td>
+            </tr>
+            <tr>
+              <td>Encodages texte</td>
+              <td>ASCII, UTF-8, EBCDIC</td>
+            </tr>
+            <tr>
+              <td>Compression</td>
+              <td>ZIP, GZIP, MP3, JPEG</td>
+            </tr>
+            <tr>
+              <td>Chiffrement</td>
+              <td>TLS, SSL, AES, RSA</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="strongu">Note</span> : ces technologies
+                <nspan class="strongu">ne sont pas toujours strictement limitées à la couche 6</nspan>
+                dans les modèles pratiques comme TCP/IP. Mais dans OSI, elles y sont classées pour des
+                raisons de logique fonctionnelle.
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--CTA-->
+        <div class="cta">
+          <a href="five.html"><div class="previous">Couche 5</div></a>
+          <a href="../index.html"><div class="return">Accueil</div></a>
+          <a href="seven.html"><div class="next">Couche 7</div></a>
+        </div>
+      </section>
     </main>
     <footer>
       <p>&copy; 2025 - Projet de Lagneaux Myron</p>
     </footer>
+    <!-- Lightbox pour afficher l'image en grand -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Image agrandie" />
+    </div>
+    <!--Bouton pour aller vers le haut-->
+    <button id="scrollToTop" title="Remonter en haut">⬆</button>
   </body>
 </html>
