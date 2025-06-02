@@ -27,7 +27,8 @@
     <main class="container">
       <section class="title"><h1>Contactez nous</h1></section>
       <section class="details">
-        <form class="styled-form">
+        <!--Mise en forme du formulaire-->
+        <form method="post" class="styled-form">
           <fieldset>
             <legend>Complétez ce formulaire :</legend>
 
@@ -64,6 +65,7 @@
             </div>
           </fieldset>
         </form>
+        <!--Mise en forme du Google Map-->
         <div class="subTitle">Où se situe le lieu d'examen :</div>
         <div class="utp">
           <iframe
@@ -81,7 +83,7 @@
     <footer>
       <p>&copy; 2025 - Projet de Lagneaux Myron</p>
     </footer>
-    <!-- Lightbox pour afficher l'image en grand -->
+    <!-- Lightbox pour afficher l'image en grand + bouton -->
     <div id="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Image agrandie" />
     </div>
