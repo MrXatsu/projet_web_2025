@@ -102,7 +102,7 @@
         <p>Deux types de câbles coaxiaux pour la transmission internet :</p>
         <div class="flex-content">
           <div class="colonne">
-            <h3 class="h3-style">Coaxial jaune</h3>
+            <h3>Coaxial jaune</h3>
             <ul>
               <li><strong>Topologie utilisée :</strong> BUS</li>
               <li><strong>Norme :</strong> 10Base5</li>
@@ -117,7 +117,7 @@
           </div>
 
           <div class="colonne">
-            <h3 class="h3-style">Coaxial noir-gris</h3>
+            <h3>Coaxial noir-gris</h3>
             <ul>
               <li><strong>Topologie utilisée :</strong> BUS</li>
               <li><strong>Norme :</strong> 10Base2</li>
@@ -132,14 +132,12 @@
           </div>
         </div>
         <div class="flex-content">
-          <ul>
-            <img
-              src="../images/cable-coaxial.webp"
-              alt="câble coaxial"
-              class="thumbnail"
-              onclick="openLightbox(this.src)"
-            />
-          </ul>
+          <img
+            src="../images/cable-coaxial.webp"
+            alt="câble coaxial"
+            class="thumbnail"
+            onclick="openLightbox(this.src)"
+          />
         </div>
         <!--Fibre Optique-->
         <h3 class="subTitle">La fibre optique</h3>
@@ -155,31 +153,35 @@
         <br />
         <p>Deux types de fibre optique :</p>
         <div class="flex-content">
-          <ul>
+          <div class="colonne">
             <h4>Monomode :</h4>
-            <li>Transmission axiale;</li>
-            <li>Un faisceau unique;</li>
-            <li>Grande bande passante;</li>
-            <li>Peu de perte.</li>
+            <ul>
+              <li>Transmission axiale;</li>
+              <li>Un faisceau unique;</li>
+              <li>Grande bande passante;</li>
+              <li>Peu de perte.</li>
+            </ul>
             <img
               src="../images/composition-fibre.webp"
               alt="composition fibre"
               class="taille"
               onclick="openLightbox(this.src)"
             />
-          </ul>
-          <ul>
+          </div>
+          <div class="colonne">
             <h4>Multimode :</h4>
-            <li>Plusieurs faisceaux simultanés;</li>
-            <li>Transmission zigzag;</li>
-            <li>Gradient d'indice -> trajectoires courbes.</li>
+            <ul>
+              <li>Plusieurs faisceaux simultanés;</li>
+              <li>Transmission zigzag;</li>
+              <li>Gradient d'indice -> trajectoires courbes.</li>
+            </ul>
             <img
               src="../images/mono-multimode.png"
               alt="Type fibre optique"
               class="taille"
               onclick="openLightbox(this.src)"
             />
-          </ul>
+          </div>
         </div>
         <!--Sans fil-->
         <h3 class="subTitle">La connexion sans fil</h3>
