@@ -34,15 +34,15 @@
     </div>
     <!-- Corps de la page  -->
     <main class="container">
-      <section class="title"><h1>Couche 4 : Le transport</h1></section>
-      <section class="details">
+      <div class="title"><span class="h1-style">Couche 4 : Le transport</span></div>
+      <div class="details">
         <p>
           <strong>La couche Transport</strong> récupère les données à partir de la Session et les
           organisent en segments avant de les envoyer vers la couche 3, Réseau et inversement après que
           les données arrivent sur l’appareil récepteur. Elle est responsable de contrôler le flux et
           reporter les erreurs inter-réseau en s’assurant que les données reçues sont complètes.
         </p>
-      </section>
+      </div>
       <section class="details">
         <h2 class="subTitle">Fonctions principales</h2>
         <h3>Fiabilité des communications</h3>
@@ -156,8 +156,10 @@
               <ol type="i">
                 <li>L’ordinateur A envoie un paquet</li>
                 <li>L’ordinateur B répond : « bien reçu ! »</li>
-                <li>Si B ne répond pas, A renvoie le paquet</li>
-                ↪️Transmission fiable mais plus lente, car il y a beaucoup d’échanges de contrôle
+                <li>
+                  Si B ne répond pas, A renvoie le paquet <br />
+                  ↪️Transmission fiable mais plus lente, car il y a beaucoup d’échanges de contrôle
+                </li>
               </ol>
             </li>
           </ul>
@@ -212,8 +214,10 @@
               Exemple simplifié :
               <ol type="i">
                 <li>L’ordinateur A envoie un paquet.</li>
-                <li>L’ordinateur B le reçoit (ou pas)</li>
-                ↪️Pas de vérification, pas de retransmission → rapide mais incertain.
+                <li>
+                  L’ordinateur B le reçoit (ou pas) <br />
+                  ↪️Pas de vérification, pas de retransmission → rapide mais incertain.
+                </li>
               </ol>
             </li>
           </ul>
