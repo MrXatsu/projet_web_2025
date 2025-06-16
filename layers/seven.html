@@ -32,15 +32,15 @@
     </div>
     <!-- Corps de la page  -->
     <main class="container">
-      <section class="title"><h1>Couche 7 : Application</h1></section>
-      <section class="details">
+      <div class="title"><span class="h1-style">Couche 7 : Application</span></div>
+      <div class="details">
         <p>
           <strong>La couche application</strong> interagit directement avec l’utilisateur et offre des
           mécanismes de communication à lui. Il initie toutes les communications vers, par exemple, les
           navigateurs, les clients e-mail et d'autres applications comprenant le HTTP et le SMTP (Simple
           Mail Transfer Protocol).
         </p>
-      </section>
+      </div>
       <section class="details">
         <h2 class="subTitle">Fonctions principales</h2>
         <div class="flex-content">
@@ -76,44 +76,50 @@
         <h2 class="subTitle">Exemples de protocoles de couche 7</h2>
         <div class="flex-content">
           <table class="styled-table utp">
-            <th>Domaine</th>
-            <th>Protocoles</th>
-            <th>Rôle</th>
-            <tr>
-              <td>🌐 Web</td>
-              <td>HTTP, HTTPS</td>
-              <td>Accès aux pages web</td>
-            </tr>
-            <tr>
-              <td>✉️ E-mail</td>
-              <td>SMTP, IMAP, POP3</td>
-              <td>Envoi/réception de mails</td>
-            </tr>
-            <tr>
-              <td>📁 Fichiers</td>
-              <td>FTP, SFTP</td>
-              <td>Transfert de fichiers</td>
-            </tr>
-            <tr>
-              <td>📞 VoIP / Téléphonie</td>
-              <td>SIP, H.323</td>
-              <td>Appels via Internet</td>
-            </tr>
-            <tr>
-              <td>🔎 Résolution de nom</td>
-              <td>DNS</td>
-              <td>Traduction noms ↔ IP</td>
-            </tr>
-            <tr>
-              <td>🧑 Authentification</td>
-              <td>LDAP, Kerberos</td>
-              <td>Gestion des identités</td>
-            </tr>
-            <tr>
-              <td>📡 Messagerie instantanée</td>
-              <td>XMPP, IRC</td>
-              <td>Communication en direct</td>
-            </tr>
+            <thead>
+              <tr>
+                <th>Domaine</th>
+                <th>Protocoles</th>
+                <th>Rôle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🌐 Web</td>
+                <td>HTTP, HTTPS</td>
+                <td>Accès aux pages web</td>
+              </tr>
+              <tr>
+                <td>✉️ E-mail</td>
+                <td>SMTP, IMAP, POP3</td>
+                <td>Envoi/réception de mails</td>
+              </tr>
+              <tr>
+                <td>📁 Fichiers</td>
+                <td>FTP, SFTP</td>
+                <td>Transfert de fichiers</td>
+              </tr>
+              <tr>
+                <td>📞 VoIP / Téléphonie</td>
+                <td>SIP, H.323</td>
+                <td>Appels via Internet</td>
+              </tr>
+              <tr>
+                <td>🔎 Résolution de nom</td>
+                <td>DNS</td>
+                <td>Traduction noms ↔ IP</td>
+              </tr>
+              <tr>
+                <td>🧑 Authentification</td>
+                <td>LDAP, Kerberos</td>
+                <td>Gestion des identités</td>
+              </tr>
+              <tr>
+                <td>📡 Messagerie instantanée</td>
+                <td>XMPP, IRC</td>
+                <td>Communication en direct</td>
+              </tr>
+            </tbody>
           </table>
         </div>
         <div class="cta">
