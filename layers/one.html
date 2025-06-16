@@ -31,10 +31,10 @@
     </div>
     <!-- Corps de la page  -->
     <main class="container">
-      <section class="title">
-        <h1>Couche 1 : Physique</h1>
-      </section>
-      <section class="details">
+      <div class="title">
+        <span class="h1-style">Couche 1 : Physique</span>
+      </div>
+      <div class="details">
         <p>
           <strong>La couche Physique :</strong> La couche physique est chargée de la transmission
           effective des signaux électriques, radiofréquences ou optiques entre les interlocuteurs. Son
@@ -43,7 +43,7 @@
           chargée de la conversion entre bits et signaux électriques ou optiques. Elle est en pratique
           toujours réalisée par un circuit électronique spécifique.
         </p>
-      </section>
+      </div>
 
       <section class="details">
         <h2><strong>Supports physiques :</strong></h2>
@@ -101,30 +101,35 @@
         <br />
         <p>Deux types de câbles coaxiaux pour la transmission internet :</p>
         <div class="flex-content">
-          <ul>
-            <h4>Coaxial jaune :</h4>
-            <li><strong>Topologie utilisée :</strong>BUS;</li>
-            <li><strong>Norme :</strong> 10base5;</li>
-            <li><strong>Longueur max : </strong>500 mètres.</li>
+          <div class="colonne">
+            <h3 class="h3-style">Coaxial jaune</h3>
+            <ul>
+              <li><strong>Topologie utilisée :</strong> BUS</li>
+              <li><strong>Norme :</strong> 10Base5</li>
+              <li><strong>Longueur max :</strong> 500 mètres</li>
+            </ul>
             <img
               src="../images/coaxial-10B5.jpg"
               alt="coaxial 10Base5"
               class="taille"
               onclick="openLightbox(this.src)"
             />
-          </ul>
-          <ul>
-            <h4>Coaxial noir-gris</h4>
-            <li><strong>Topologie utilisée : </strong>BUS;</li>
-            <li><strong>Norme : </strong> 10Base2;</li>
-            <li><strong>Longueur max : </strong>185 mètres.</li>
+          </div>
+
+          <div class="colonne">
+            <h3 class="h3-style">Coaxial noir-gris</h3>
+            <ul>
+              <li><strong>Topologie utilisée :</strong> BUS</li>
+              <li><strong>Norme :</strong> 10Base2</li>
+              <li><strong>Longueur max :</strong> 185 mètres</li>
+            </ul>
             <img
               src="../images/10B2.jpg"
               alt="coaxial 10Base2"
               class="taille"
               onclick="openLightbox(this.src)"
             />
-          </ul>
+          </div>
         </div>
         <div class="flex-content">
           <ul>

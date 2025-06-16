@@ -67,9 +67,15 @@
 
 .flex-content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 0 20px;
+  gap: 2rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.colonne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .utp ul {
