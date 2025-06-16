@@ -34,8 +34,8 @@
     </div>
     <!-- Corps de la page  -->
     <main class="container">
-      <section class="title"><h1>Couche 6 : Présentation</h1></section>
-      <section class="details">
+      <div class="title"><span class="h1-style">Couche 6 : Présentation</span></div>
+      <div class="details">
         <p>
           <strong>La couche présentation</strong> rend les données présentables. Elle les traduit,
           compressent et les déchiffrent pour que l’application puisse les utiliser. Comme deux appareils
@@ -43,7 +43,7 @@
           capable de traduire sous une syntaxe compréhensible pour le récepteur en lui envoyant le
           chiffrement de l’expéditeur.
         </p>
-      </section>
+      </div>
       <section class="details">
         <h2 class="subTitle">Fonctions principales</h2>
         <div class="flex-content">
@@ -92,32 +92,38 @@
         <h2 class="subTitle">Exemples de formats ou technologies associés à la couche Présentation :</h2>
         <div class="flex-content">
           <table class="styled-table utp">
-            <th>Type de transformation</th>
-            <th>Exemples</th>
-            <tr>
-              <td>Formats de données</td>
-              <td>JSON, XML, CSV</td>
-            </tr>
-            <tr>
-              <td>Encodages texte</td>
-              <td>ASCII, UTF-8, EBCDIC</td>
-            </tr>
-            <tr>
-              <td>Compression</td>
-              <td>ZIP, GZIP, MP3, JPEG</td>
-            </tr>
-            <tr>
-              <td>Chiffrement</td>
-              <td>TLS, SSL, AES, RSA</td>
-            </tr>
-            <tr>
-              <td>
-                <span class="strongu">Note</span> : ces technologies
-                <nspan class="strongu">ne sont pas toujours strictement limitées à la couche 6</nspan>
-                dans les modèles pratiques comme TCP/IP. Mais dans OSI, elles y sont classées pour des
-                raisons de logique fonctionnelle.
-              </td>
-            </tr>
+            <thead>
+              <tr>
+                <th>Type de transformation</th>
+                <th>Exemples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Formats de données</td>
+                <td>JSON, XML, CSV</td>
+              </tr>
+              <tr>
+                <td>Encodages texte</td>
+                <td>ASCII, UTF-8, EBCDIC</td>
+              </tr>
+              <tr>
+                <td>Compression</td>
+                <td>ZIP, GZIP, MP3, JPEG</td>
+              </tr>
+              <tr>
+                <td>Chiffrement</td>
+                <td>TLS, SSL, AES, RSA</td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <span class="strongu">Note</span> : ces technologies
+                  <span class="strongu">ne sont pas toujours strictement limitées à la couche 6</span>
+                  dans les modèles pratiques comme TCP/IP. Mais dans OSI, elles y sont classées pour des
+                  raisons de logique fonctionnelle.
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
         <!--CTA-->
