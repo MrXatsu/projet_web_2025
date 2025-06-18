@@ -223,6 +223,10 @@
     flex: 0 0 100%;
   }
 
+  .utp {
+    padding: 0 16px;
+  }
+
   .cta {
     justify-content: center;
   }
