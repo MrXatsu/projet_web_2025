@@ -64,3 +64,11 @@ footer {
   margin-top: 100px;
   justify-content: center;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0 auto;
+    max-width: 100%; /* Évite les débordements */
+    padding: 0 10px; /* Laisse un peu d'air sur les côtés si tu veux */
+  }
+}

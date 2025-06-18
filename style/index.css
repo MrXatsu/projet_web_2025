@@ -27,3 +27,11 @@
 footer {
   position: fixed;
 }
+@media screen and (max-width: 768px) {
+  footer {
+    position: static !important;
+    width: 100%;
+    bottom: auto;
+    left: auto;
+  }
+}

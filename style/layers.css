@@ -1,5 +1,5 @@
 .title {
-  flex: 0 0 30%;
+  flex: 0 0 50%;
   margin: 20px;
   background-color: #ffffff;
   border: 1px solid #003366;
@@ -44,7 +44,7 @@
 }
 
 .details {
-  flex: 0 0 70%;
+  flex: 0 0 75%;
   margin: 20px;
   background-color: #ffffff;
   border: 1px solid #003366;
@@ -201,4 +201,50 @@
 #scrollToTop:hover {
   background-color: #217dbb;
   transform: scale(1.1);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .details {
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 20px 0; /* Supprime les marges latérales */
+    box-sizing: border-box;
+  }
+
+  .details img {
+    max-width: 75%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  .title {
+    flex: 0 0 100%;
+  }
+
+  .cta {
+    justify-content: center;
+  }
+  .return,
+  .next,
+  .previous {
+    margin: 10px 0;
+    width: 100px;
+    height: 30px;
+  }
+
+  .styled-table {
+    width: 100%;
+    max-width: 100%;
+    display: table;
+    table-layout: fixed;
+    word-wrap: break-word;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    white-space: normal;
+    word-break: break-word;
+  }
 }
