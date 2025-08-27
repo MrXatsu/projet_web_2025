@@ -58,10 +58,11 @@ const retryBtn = document.getElementById("retryBtn");
 const closePopupBtn = document.getElementById("closePopupBtn");
 
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  e.preventDefault(); // Empêche le rechargement
 
   const questionBlocks = document.querySelectorAll(".quiz-question");
   let allAnswered = true;
+  let score = 0;
 
   questionBlocks.forEach((block, index) => {
     const inputs = block.querySelectorAll("input");
@@ -75,7 +76,7 @@ form.addEventListener("submit", function (e) {
 
     if (!answered) {
       allAnswered = false;
-      block.style.border = "2px solid red";
+      block.style.border = "2px solid orange";
     } else {
       block.style.border = "none";
     }
@@ -86,38 +87,52 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  // Calcul du score
-  let score = 0;
+  // Calcul du score et correction
   questionBlocks.forEach((block, index) => {
     const q = quiz[index];
     const inputs = block.querySelectorAll("input");
-
     let userAnswers = [];
+
     inputs.forEach((input) => {
-      if (input.checked) userAnswers.push(parseInt(input.value));
+      if (input.checked) {
+        userAnswers.push(parseInt(input.value));
+      }
     });
 
-    // Vérification des réponses correctes
+    let isCorrect;
     if (q.type === "single") {
-      if (userAnswers[0] === q.correct) {
-        score++;
-        block.style.backgroundColor = "#d4edda"; // vert
-      } else {
-        block.style.backgroundColor = "#f8d7da"; // rouge
-      }
+      isCorrect = userAnswers.length === 1 && userAnswers[0] === q.correct;
     } else {
-      userAnswers.sort();
-      if (JSON.stringify(userAnswers) === JSON.stringify(q.correct)) {
-        score++;
-        block.style.backgroundColor = "#d4edda";
-      } else {
-        block.style.backgroundColor = "#f8d7da";
+      isCorrect =
+        userAnswers.length === q.correct.length && userAnswers.every((val) => q.correct.includes(val));
+    }
+
+    if (isCorrect) {
+      block.style.backgroundColor = "#d4edda"; // vert
+      score++;
+    } else {
+      block.style.backgroundColor = "#f8d7da"; // rouge
+
+      if (!block.querySelector(".correct-answer")) {
+        const correctAnswer = document.createElement("p");
+        correctAnswer.classList.add("correct-answer");
+        correctAnswer.style.color = "green";
+        correctAnswer.style.fontStyle = "italic";
+
+        let correctText;
+        if (Array.isArray(q.correct)) {
+          correctText = q.correct.map((idx) => q.choices[idx]).join(", ");
+        } else {
+          correctText = q.choices[q.correct];
+        }
+
+        correctAnswer.textContent = `La réponse est : ${correctText}`;
+        block.appendChild(correctAnswer);
       }
     }
   });
 
-  // Affichage du pop-up avec le score
-  popupScore.textContent = `Votre score est de ${score} / ${quiz.length}`;
+  popupScore.textContent = `Vous avez eu ${score} bonnes réponses sur ${quiz.length}`;
   popup.classList.remove("hidden");
   retryBtn.classList.remove("hidden");
 });
@@ -140,6 +155,12 @@ retryBtn.addEventListener("click", function () {
     block.querySelectorAll("input").forEach((input) => {
       input.checked = false;
     });
+
+    // Supprimer les corrections affichées
+    const correction = block.querySelector(".correct-answer");
+    if (correction) {
+      correction.remove();
+    }
   });
 
   popup.classList.add("hidden");
