@@ -1,7 +1,15 @@
 .quiz-form {
   margin-bottom: 20px;
 }
-
+.quiz-question {
+  margin: 3rem 3rem;
+}
+.quiz-question p {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 .choice {
   display: block;
   padding: 5px;
@@ -12,6 +20,7 @@
 
 #submitBtn {
   margin-top: 15px;
+  margin-left: 1.5rem;
   padding: 10px;
   background-color: #007bff;
   color: #fff;
@@ -42,7 +51,9 @@
 #retryBtn:hover {
   background-color: #218838;
 }
-
+footer {
+  position: static;
+}
 .popup {
   position: fixed;
   top: 0;
