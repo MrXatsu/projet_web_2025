@@ -74,6 +74,6 @@ footer {
   .container {
     margin: 0 auto;
     max-width: 100%; /* Évite les débordements */
-    padding: 0 10px; /* Laisse un peu d'air sur les côtés si tu veux */
+    padding: 0 10px; /* Laisse un peu d'air sur les côtés */
   }
 }
